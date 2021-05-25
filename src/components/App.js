@@ -1,7 +1,14 @@
 import React from 'react';
+import Sidebar from './Sidebar';
+import Main from './Main';
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <Sidebar />
+      <Main />
+    </div>
+  );
 };
 
 export default App;
