@@ -1,9 +1,14 @@
 import React from 'react';
+import Navbar from './Navbar';
+import Searchbar from './Searchbar';
 
 const Sidebar = () => {
   return (
-    <div className="bg-blue-900 w-1/6 space-y-6 py-7 px-2 text-white">
-      <a href="#" className="flex items-center justify-center  space-x-2 px-4">
+    <div className="bg-blue-900 w-1/6 space-y-10 py-7 px-2">
+      <a
+        href="#"
+        className="text-white flex items-center justify-center space-x-2"
+      >
         <svg
           className="w-8 h-8"
           xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +26,8 @@ const Sidebar = () => {
         </svg>
         <span className="text-2x1 font-extrabold">Crypto Tracker Chart</span>
       </a>
-      <nav></nav>
+      <Searchbar className="flex items-center justify-center" />
+      <Navbar />
     </div>
   );
 };
