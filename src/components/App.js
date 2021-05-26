@@ -4,7 +4,7 @@ import Main from './Main';
 
 const App = () => {
   return (
-    <div>
+    <div className="relative min-h-screen flex">
       <Sidebar />
       <Main />
     </div>
