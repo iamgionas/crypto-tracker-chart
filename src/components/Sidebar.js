@@ -25,7 +25,7 @@ const Sidebar = () => {
         </svg>
         <span className="text-2x1 font-extrabold">Crypto Tracker Chart</span>
       </a>
-      <Searchbar className="px-4" />
+      <Searchbar className="px-2" />
       <Navbar className="px-2 text-white" />
     </div>
   );

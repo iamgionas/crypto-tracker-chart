@@ -1,3 +1,10 @@
 import React from 'react';
 
-export default React.createContext([]);
+const defaultCryptoState = {
+  items: [],
+  setItems: () => {},
+  item: null,
+  setItem: () => {},
+};
+
+export default React.createContext(defaultCryptoState);

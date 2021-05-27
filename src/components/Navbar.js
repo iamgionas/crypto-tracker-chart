@@ -4,12 +4,17 @@ import CryptoContext from '../contexts/CryptoContext';
 import Item from './Item';
 
 const Navbar = ({ className }) => {
-  const cryptoList = useContext(CryptoContext);
+  const { items, item, setItem } = useContext(CryptoContext);
 
   return (
     <nav className={`${className} flex flex-col space-y-2`}>
-      {cryptoList.map((crypto) => (
-        <Item crypto={crypto} key={crypto.id} />
+      {items.map((crypto) => (
+        <Item
+          cryptoSelected={item}
+          selectCrypto={setItem}
+          crypto={crypto}
+          key={crypto.id}
+        />
       ))}
     </nav>
   );
