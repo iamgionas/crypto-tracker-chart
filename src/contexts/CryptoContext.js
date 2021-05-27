@@ -5,6 +5,8 @@ const defaultCryptoState = {
   setItems: () => {},
   item: null,
   setItem: () => {},
+  query: null,
+  setQuery: () => {},
 };
 
 export default React.createContext(defaultCryptoState);
