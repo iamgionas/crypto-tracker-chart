@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Navbar = ({ className }) => {
+const Searchbar = ({ className }) => {
   return (
-    <div className={`${className} px-4`}>
+    <div className={`${className}`}>
       <input
         className="p-2 px-3 border rounded w-full"
         placeholder="Search... "
@@ -11,4 +11,4 @@ const Navbar = ({ className }) => {
   );
 };
 
-export default Navbar;
+export default Searchbar;
