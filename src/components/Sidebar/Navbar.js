@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import CryptoContext from '../contexts/CryptoContext';
+import CryptoContext from '../../store/CryptoContext';
 import Item from './Item';
 
 const Navbar = ({ className }) => {

@@ -1,9 +1,9 @@
 import React, { useEffect, useContext } from 'react';
 
-import CryptoProvider from '../contexts/CryptoProvider';
+import CryptoProvider from '../store/CryptoProvider';
 
-import Sidebar from './Sidebar';
-import Main from './Main';
+import Sidebar from './Sidebar/Sidebar';
+import Main from './Main/Main';
 
 const App = () => {
   return (

@@ -17,9 +17,9 @@ const Item = ({ crypto, cryptoSelected, selectCrypto }) => {
         <img className="w-6 h-6" src={crypto.image} />
         <span>
           {crypto.symbol.toUpperCase()}
-          <span className="text-xs">/USD</span>
+          <span className="text-xs ">/USD</span>
         </span>
-        <span className={`${getColor}  text-xs bg-gray-500 p-1 rounded`}>
+        <span className={`${getColor} text-xs bg-gray-500 p-1 rounded`}>
           {`${crypto.market_cap_change_percentage_24h.toFixed(2)}%`}
         </span>
       </div>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import CryptoContext from '../contexts/CryptoContext';
+import CryptoContext from '../../store/CryptoContext';
 
 const Searchbar = ({ className }) => {
   const { query, setQuery } = useContext(CryptoContext);
