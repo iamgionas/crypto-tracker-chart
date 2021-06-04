@@ -1,4 +1,5 @@
 import React from 'react';
+import PercentageBox from '../Share/PercentageBox';
 
 const Header = ({ crypto }) => {
   const toUSD = (number) =>
@@ -7,11 +8,6 @@ const Header = ({ crypto }) => {
       currency: 'USD',
     }).format(number);
 
-  const getColor =
-    crypto?.market_cap_change_percentage_24h.toString().charAt(0) == '-'
-      ? 'bg-red-600'
-      : 'bg-green-600';
-
   return (
     <main>
       {crypto && (
@@ -19,9 +15,7 @@ const Header = ({ crypto }) => {
           <div className="flex  space-x-5 items-center">
             <img src={crypto?.image} className="w-8 h-8" />
             <h1 className="text-3xl">{crypto.name}</h1>
-            <span
-              className={`${getColor} text-xs bg-gray-500 p-1 rounded`}
-            >{`${crypto.market_cap_change_percentage_24h.toFixed(2)}%`}</span>
+            <PercentageBox number={crypto.market_cap_change_percentage_24h} />
           </div>
           <div className="grid justify-items-center">
             <span>Current price</span>{' '}

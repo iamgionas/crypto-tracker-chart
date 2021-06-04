@@ -1,11 +1,7 @@
 import React from 'react';
+import PercentageBox from '../Share/PercentageBox';
 
 const Item = ({ crypto, cryptoSelected, selectCrypto }) => {
-  const getColor =
-    crypto.market_cap_change_percentage_24h.toString().charAt(0) == '-'
-      ? 'bg-red-600'
-      : 'bg-green-600';
-
   return (
     <a
       onClick={selectCrypto.bind(null, crypto)}
@@ -19,9 +15,7 @@ const Item = ({ crypto, cryptoSelected, selectCrypto }) => {
           {crypto.symbol.toUpperCase()}
           <span className="text-xs ">/USD</span>
         </span>
-        <span className={`${getColor} text-xs bg-gray-500 p-1 rounded`}>
-          {`${crypto.market_cap_change_percentage_24h.toFixed(2)}%`}
-        </span>
+        <PercentageBox number={crypto.market_cap_change_percentage_24h} />
       </div>
     </a>
   );
