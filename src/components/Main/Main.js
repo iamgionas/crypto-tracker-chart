@@ -5,11 +5,9 @@ import Header from './Header';
 const Main = () => {
   const { item } = useContext(CryptoContext);
 
-  console.log(item);
-
   return (
     <main className="flex-1 bg-gray-300 p-10">
-      <Header crypto={item} />
+      {item && <Header crypto={item} />}
     </main>
   );
 };
