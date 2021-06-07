@@ -7,7 +7,7 @@ const Navbar = ({ className }) => {
   const { items, item, setItem } = useContext(CryptoContext);
 
   return (
-    <nav className={`${className} flex flex-col space-y-2`}>
+    <nav className={`${className} flex flex-col space-y-2 overflow-scroll`}>
       {items.map((crypto) => (
         <Item
           cryptoSelected={item}
