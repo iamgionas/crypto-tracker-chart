@@ -2,12 +2,16 @@ import React from 'react';
 import Navbar from './Navbar';
 import Searchbar from './Searchbar';
 
+import styles from '../Share/Style.module.css';
+
 const Sidebar = () => {
   return (
-    <div className="h-screen flex flex-col bg-blue-900 space-y-10 w-1/6">
+    <div
+      className={`${styles.backgroundGlass} h-screen flex flex-col space-y-10 w-1/6`}
+    >
       <a
         href="#"
-        className="text-white flex items-center justify-center space-x-2 mt-10"
+        className="text-black flex items-center justify-center space-x-2 mt-10"
       >
         <svg
           className="w-8 h-8"
@@ -26,7 +30,7 @@ const Sidebar = () => {
         <span className="text-2x1 font-extrabold">Crypto Tracker Chart</span>
       </a>
       <Searchbar className="px-2" />
-      <Navbar className="px-2 text-white mb-3" />
+      <Navbar className="px-2 text-black mb-3" />
     </div>
   );
 };
