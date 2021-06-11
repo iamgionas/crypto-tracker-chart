@@ -1,5 +1,6 @@
 import React from 'react';
 import PercentageBox from '../Share/PercentageBox';
+import HeaderBox from './HeaderBox';
 
 const Header = ({ crypto }) => {
   const toUSD = (number) =>
@@ -16,22 +17,9 @@ const Header = ({ crypto }) => {
         <PercentageBox number={crypto.market_cap_change_percentage_24h} />
       </div>
       <div className="grid grid-cols-3 gap-x-20">
-        <div className="grid justify-items-center">
-          <span>Current price</span>{' '}
-          <span className="font-bold text-xl">
-            {toUSD(crypto.current_price)}
-          </span>
-        </div>
-        <div className="grid justify-items-center">
-          <span>Market cap</span>{' '}
-          <span className="font-bold text-xl">{toUSD(crypto.market_cap)}</span>
-        </div>
-        <div className="grid justify-items-center">
-          <span>Volume</span>{' '}
-          <span className="font-bold text-xl">
-            {toUSD(crypto.total_volume)}
-          </span>
-        </div>
+        <HeaderBox label="Current price" value={toUSD(crypto.current_price)} />
+        <HeaderBox label="Market cap" value={toUSD(crypto.market_cap)} />
+        <HeaderBox label="Volume" value={toUSD(crypto.total_volume)} />
       </div>
     </header>
   );
