@@ -11,7 +11,7 @@ const Sidebar = () => {
     >
       <a
         href="#"
-        className="text-black flex items-center justify-center space-x-2 mt-10"
+        className="text-white flex items-center justify-center space-x-2 mt-10"
       >
         <svg
           className="w-8 h-8"
