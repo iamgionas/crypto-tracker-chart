@@ -2,7 +2,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/gionasdev/movie-library">
+  <a href="https://github.com/gionasdev/crypto-tracker-chart">
     <img src="src/img/logo-white.png" alt="Logo" width="150" height="150">
   </a>
 
@@ -12,22 +12,21 @@
     Description
     <br />
     <br />
-    <a href="https://movie-library-vanilla-js.netlify.app/">View Demo</a>
+    <a href="https://crypto-tracker-chart.netlify.app">View Demo</a>
   </p>
 </p>
 
 
 ## About The Project
 
-Simple movie library to find information about films. I used **MVC pattern** and the last **ES6 Features**.
+Simple web app to watch crypto market trend. I used **React.js** and the last **ES6 Features**.
 
 ## Built With
 
 * HTML5
-* SASS
-* Vanilla JS
-* [ParcelJS](https://parceljs.org/)
-* [Fort Awesome](https://fortawesome.com/)
+* CSS
+* [ReactJS](https://reactjs.org/)
+* [Tailwind UI](https://tailwindui.com/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -43,18 +42,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Get a free API Key at [The Movie Database](https://www.themoviedb.org/documentation/api)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/gionasdev/movie-library.git
+   git clone https://github.com/gionasdev//crypto-tracker-chart.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   export const API_KEY = 'ENTER YOUR API';
    ```
 
 <!-- USAGE EXAMPLES -->
