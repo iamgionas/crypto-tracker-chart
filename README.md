@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/938c81cf-b34e-48ed-b0ff-98ac6f815f43/deploy-status)](https://app.netlify.com/sites/movie-library-vanilla-js/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a4204580-c0a3-43b4-9867-5e5e1a041b1f/deploy-status)](https://app.netlify.com/sites/crypto-tracker-chart/deploys)
 
 <br />
 <p align="center">
