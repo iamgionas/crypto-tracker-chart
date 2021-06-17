@@ -9,7 +9,7 @@
   <h3 align="center">Crypto Tracker Chart</h3>
 
   <p align="center">
-    Description
+    Simple web app to watch crypto market trend. I used **React.js** and **Tailwind UI**.
     <br />
     <br />
     <a href="https://crypto-tracker-chart.netlify.app">View Demo</a>
