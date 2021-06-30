@@ -7,7 +7,7 @@ import styles from '../Share/Style.module.css';
 const Sidebar = () => {
   return (
     <div
-      className={`${styles.backgroundGlass} h-screen flex flex-col space-y-10 w-1/6`}
+      className={`${styles.backgroundGlass} h-screen flex flex-col space-y-10 min-w-20`}
     >
       <a
         href="#"

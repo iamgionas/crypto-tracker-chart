@@ -7,8 +7,8 @@ const Navbar = ({ className }) => {
   const { items, item, setItem } = useContext(CryptoContext);
 
   return items.length == 0 ? (
-    <div class="flex justify-center">
-      <div class="inline-block animate-spin rounded-md ease duration-300 w-5 h-5 bg-white mx-2"></div>
+    <div className="flex justify-center">
+      <div className="inline-block animate-spin rounded-md ease duration-300 w-5 h-5 bg-white mx-2"></div>
     </div>
   ) : (
     <nav
