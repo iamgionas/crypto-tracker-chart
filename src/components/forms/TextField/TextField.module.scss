@@ -5,4 +5,11 @@
   border-radius: 0.5rem;
   border: none;
   width: 40%;
+  box-shadow: 0px 10px 40px -10px rgba(0, 64, 128, 20%);
+
+  @media only screen and (max-width: 719px) {
+    & {
+      width: 80%;
+    }
+  }
 }
