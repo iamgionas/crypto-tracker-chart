@@ -10,6 +10,9 @@ const Item = ({ crypto }) => {
       </div>
       <div className={styles.card__content}>
         <h1>{crypto.name}</h1>
+        <p>Current price: {crypto.current_price}</p>
+        <p>Total volume: {crypto.total_volume}</p>
+        <p>Price change 24h: {crypto.price_change_percentage_24h}</p>
       </div>
     </div>
   );
