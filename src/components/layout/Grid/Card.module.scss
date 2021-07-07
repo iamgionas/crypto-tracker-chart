@@ -1,0 +1,26 @@
+@import '../../../utils/base.scss';
+
+.card {
+  height: 150px;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 40px -10px rgba(0, 64, 128, 20%);
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  transition: all 0.3s linear;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1rem);
+    box-shadow: 0px 20px 50px -10px rgba(0, 64, 128, 20%);
+  }
+
+  &__img {
+    padding: 2rem;
+  }
+  &__content {
+    padding: 2rem;
+    height: 100%;
+  }
+}
