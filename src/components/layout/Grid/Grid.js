@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './Grid.module.scss';
 import Card from '../Card/Card';
+import CryptoContext from '../../../store/crypto-context';
 
 const Grid = ({ cryptoList }) => {
-  // TODO MAKE A ITEM COMPONENT AND STYLE + CONTEXT NOT PROPS TO CHILD
+  const crpytoCtx = useContext(CryptoContext);
+  console.log(crpytoCtx);
+
   return (
     <div className={styles.grid}>
-      {cryptoList.map((crypto) => (
+      {crpytoCtx.cryptos.map((crypto) => (
         <Card key={crypto.id} crypto={crypto} />
       ))}
     </div>

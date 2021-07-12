@@ -13,7 +13,7 @@ const Item = ({ crypto }) => {
   };
 
   const background =
-    crypto.price_change_percentage_24h > 0 ? '#78BC61' : '#d63230';
+    crypto.price_change_percentage_24h > 0 ? '#5EFC8D' : '#d63230';
   const color = crypto.price_change_percentage_24h > 0 ? '#000' : '#fff';
 
   return (

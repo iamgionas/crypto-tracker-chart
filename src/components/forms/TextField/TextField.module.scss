@@ -1,10 +1,11 @@
 @import '../../../utils/base.scss';
 
 .input {
-  padding: 1rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
   border-radius: 0.5rem;
   border: none;
-  width: 40%;
+  width: 50%;
   box-shadow: 0px 10px 40px -10px rgba(0, 64, 128, 20%);
 
   @media only screen and (max-width: 719px) {
