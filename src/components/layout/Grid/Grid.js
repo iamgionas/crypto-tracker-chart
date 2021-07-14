@@ -1,19 +1,21 @@
 import React, { useContext } from 'react';
 import styles from './Grid.module.scss';
 import Card from '../Card/Card';
-import CryptoContext from '../../../store/crypto-context';
+import Loading from '../Loading/Loading';
+import { CryptoContext } from '../../../store/CryptoContext';
 
 const Grid = ({ cryptoList }) => {
-  const crpytoCtx = useContext(CryptoContext);
-  console.log(crpytoCtx);
+  const cryptoCtx = useContext(CryptoContext);
 
-  return (
-    <div className={styles.grid}>
-      {crpytoCtx.cryptos.map((crypto) => (
-        <Card key={crypto.id} crypto={crypto} />
-      ))}
-    </div>
-  );
+  if (cryptoCtx.cryptos.length === 0) return <Loading />;
+  else
+    return (
+      <div className={styles.grid}>
+        {cryptoCtx.cryptos.map((crypto) => (
+          <Card key={crypto.id} crypto={crypto} />
+        ))}
+      </div>
+    );
 };
 
 export default Grid;

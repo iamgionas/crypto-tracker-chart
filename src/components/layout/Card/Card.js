@@ -19,7 +19,7 @@ const Item = ({ crypto }) => {
   return (
     <div className={styles.card}>
       <div className={styles.card__img}>
-        <img src={crypto.image} width="50px" alt={crypto.id} loading="lazy" />
+        <img src={crypto.image} width="50px" alt={crypto.id} />
         <h4>{crypto.symbol.toUpperCase()}</h4>
       </div>
       <div className={styles.card__content}>
