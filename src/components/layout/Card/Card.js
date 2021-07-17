@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './Card.module.scss';
 import Chip from '../Chip/Chip';
+import { Link } from 'react-router-dom';
 
 const Item = ({ crypto }) => {
-  // TODO MAKE A ITEM COMPONENT AND STYLE + CONTEXT NOT PROPS TO CHILD
-
   const toCurrency = (number) => {
     return new Intl.NumberFormat('en-EN', {
       style: 'currency',
@@ -17,7 +16,7 @@ const Item = ({ crypto }) => {
   const color = crypto.price_change_percentage_24h > 0 ? '#000' : '#fff';
 
   return (
-    <div className={styles.card}>
+    <Link to={`/crypto/${crypto.id}`} className={styles.card}>
       <div className={styles.card__img}>
         <img src={crypto.image} width="50px" alt={crypto.id} />
         <h4>{crypto.symbol.toUpperCase()}</h4>
@@ -30,7 +29,7 @@ const Item = ({ crypto }) => {
       <div className={styles.card__percentage} style={{ background, color }}>
         {`${crypto.price_change_percentage_24h.toFixed(2)}%`}
       </div>
-    </div>
+    </Link>
   );
 };
 
