@@ -9,17 +9,15 @@ import { Route, Switch } from 'react-router-dom';
 const App = () => {
   return (
     <CryptoProvider>
-      <Header />
-      <Main>
-        <Switch>
-          <Route path="/crypto/:cryptoId">
-            <Crypto />
-          </Route>
-          <Route path="/">
-            <Grid />
-          </Route>
-        </Switch>
-      </Main>
+      <Switch>
+        <Route path="/crypto/:cryptoId">
+          <Crypto />
+        </Route>
+        <Route path="/">
+          <Header />
+          <Grid />
+        </Route>
+      </Switch>
     </CryptoProvider>
   );
 };
