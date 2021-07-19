@@ -5,8 +5,8 @@ const Chip = ({ label, value }) => {
   // TODO MAKE A Chip COMPONENT AND STYLE + CONTEXT NOT PROPS TO CHILD
   return (
     <div className={styles.chip}>
-      <span style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>{label} </span>
-      <br /> <span style={{ fontSize: '1.6rem' }}>{value}</span>
+      <span className={styles.chip__label}>{label} </span>
+      <br /> <span className={styles.chip__value}>{value}</span>
     </div>
   );
 };

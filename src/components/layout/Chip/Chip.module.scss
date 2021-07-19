@@ -1,5 +1,12 @@
 .chip {
-  padding: 0.6rem 0 0.6rem 0;
-  font-size: 1.1em;
   padding: 1rem 0 1rem 0;
+
+  &__label {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  &__value {
+    font-size: 1.5rem;
+  }
 }

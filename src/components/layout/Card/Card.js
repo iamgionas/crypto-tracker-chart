@@ -22,7 +22,7 @@ const Item = ({ crypto }) => {
         <h4>{crypto.symbol.toUpperCase()}</h4>
       </div>
       <div className={styles.card__content}>
-        <h1>{crypto.name}</h1>
+        <h2>{crypto.name}</h2>
         <Chip label="Price" value={toCurrency(crypto.current_price)} />
         <Chip label="Mkt cap" value={toCurrency(crypto.market_cap)} />
       </div>
