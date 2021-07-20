@@ -15,7 +15,9 @@ const App = () => {
         </Route>
         <Route path="/">
           <Header />
-          <Grid />
+          <Main>
+            <Grid />
+          </Main>
         </Route>
       </Switch>
     </CryptoProvider>

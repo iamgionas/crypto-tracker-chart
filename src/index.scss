@@ -17,7 +17,7 @@ body {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  min-height: 100vh;
+  min-height: calc(100vh - 10rem);
   background-image: radial-gradient(
     circle 465px at -15.1% -25%,
     rgba(17, 130, 193, 1) 0%,
