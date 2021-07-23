@@ -25,6 +25,7 @@ Simple web app to watch crypto market trend. I used **React.js** and the last **
 - HTML5
 - CSS
 - [ReactJS](https://reactjs.org/)
+- [chartist](https://gionkunz.github.io/chartist-js/)
 
 <!-- GETTING STARTED -->
 
