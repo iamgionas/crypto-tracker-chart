@@ -1,13 +1,8 @@
 import React from 'react';
-import TextField from '../../forms/TextField/TextField';
 import styles from './Header.module.scss';
 
-const Header = () => {
-  return (
-    <header className={styles.header}>
-      <TextField />
-    </header>
-  );
+const Header = ({ children }) => {
+  return <header className={styles.header}>{children}</header>;
 };
 
 export default Header;

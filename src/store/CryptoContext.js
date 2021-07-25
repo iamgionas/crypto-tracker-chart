@@ -4,6 +4,7 @@ import axios from 'axios';
 export const CryptoContext = createContext();
 
 export const CryptoProvider = ({ children }) => {
+  const [cryptosLoaded, setCryptosLoaded] = useState([]);
   const [cryptos, setCryptos] = useState([]);
   const [crypto, setCrypto] = useState(null);
   const [query, setQuery] = useState('');
@@ -13,20 +14,24 @@ export const CryptoProvider = ({ children }) => {
       const { data } = await axios.get(
         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
       );
+      setCryptosLoaded(data);
       setCryptos(data);
     };
 
+    // Only the first time
+    if (!cryptosLoaded.length) loadCrypto();
+
     const timeoutId = setTimeout((_) => {
-      if (!query) {
-        loadCrypto();
-      } else {
-        setCryptos((cryptos) =>
-          cryptos.filter(
+      if (query) {
+        setCryptos(
+          cryptosLoaded.filter(
             (crypto) =>
               crypto.name.toLowerCase().includes(query.toLowerCase().trim()) ||
               crypto.symbol.toLowerCase().includes(query.toLowerCase().trim())
           )
         );
+      } else {
+        if (cryptosLoaded.length) setCryptos([...cryptosLoaded]);
       }
     }, 500);
 

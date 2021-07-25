@@ -5,11 +5,10 @@
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.55);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 3.2rem 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 0 0 2rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   top: 0;

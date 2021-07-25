@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import styles from './TextField.module.scss';
 import { CryptoContext } from '../../../store/CryptoContext';
 
