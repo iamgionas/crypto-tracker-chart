@@ -1,26 +1,33 @@
 import { useEffect, useState, createContext } from 'react';
-import axios from 'axios';
+import useHttp from '../hooks/use-http';
 
 export const CryptoContext = createContext();
 
 export const CryptoProvider = ({ children }) => {
+  const applyData = (data) => {
+    setCryptosLoaded(data);
+    setCryptos(data);
+  };
+
+  const {
+    isLoading,
+    error,
+    sendRequest: fetchCryptos,
+  } = useHttp(
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false',
+    applyData
+  );
+
   const [cryptosLoaded, setCryptosLoaded] = useState([]);
   const [cryptos, setCryptos] = useState([]);
   const [crypto, setCrypto] = useState(null);
   const [query, setQuery] = useState('');
 
   useEffect(() => {
-    const loadCrypto = async () => {
-      const { data } = await axios.get(
-        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
-      );
-      setCryptosLoaded(data);
-      setCryptos(data);
-    };
+    fetchCryptos();
+  }, []);
 
-    // Only the first time
-    if (!cryptosLoaded.length) loadCrypto();
-
+  useEffect(() => {
     const timeoutId = setTimeout((_) => {
       if (query) {
         setCryptos(
@@ -31,7 +38,7 @@ export const CryptoProvider = ({ children }) => {
           )
         );
       } else {
-        if (cryptosLoaded.length) setCryptos([...cryptosLoaded]);
+        if (!isLoading && cryptosLoaded.length) setCryptos([...cryptosLoaded]);
       }
     }, 500);
 
@@ -42,7 +49,7 @@ export const CryptoProvider = ({ children }) => {
 
   return (
     <CryptoContext.Provider
-      value={{ cryptos, setCryptos, crypto, setCrypto, query, setQuery }}
+      value={{ cryptos, crypto, setCrypto, query, setQuery, isLoading }}
     >
       {children}
     </CryptoContext.Provider>

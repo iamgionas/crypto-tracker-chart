@@ -9,7 +9,7 @@ const Grid = () => {
 
   if (cryptoCtx.cryptos.length === 0 && cryptoCtx.query)
     return 'No crypto founded!';
-  else if (cryptoCtx.cryptos.length === 0) return <Loading />;
+  else if (cryptoCtx.isLoading) return <Loading />;
   else
     return (
       <div className={styles.grid}>
