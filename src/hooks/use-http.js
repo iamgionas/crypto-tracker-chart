@@ -1,25 +1,28 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import axios from 'axios';
 
-const useHttp = (url, applayData) => {
+const useHttp = (applyData) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const sendRequest = async () => {
-    setIsLoading(true);
-    setError(null);
+  const sendRequest = useCallback(
+    async (url) => {
+      setIsLoading(true);
+      setError(null);
 
-    let data;
-    try {
-      const result = await axios.get(url);
-      data = result.data;
-    } catch (error) {
-      setError(error.message || 'Something went wrong!');
-    }
+      let data;
+      try {
+        const result = await axios.get(url);
+        data = result.data;
+      } catch (error) {
+        setError(error.message || 'Something went wrong!');
+      }
 
-    setIsLoading(false);
-    applayData(data);
-  };
+      setIsLoading(false);
+      applyData(data);
+    },
+    [applyData]
+  );
 
   return {
     isLoading,

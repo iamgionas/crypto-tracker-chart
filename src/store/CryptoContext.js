@@ -1,22 +1,15 @@
-import { useEffect, useState, createContext } from 'react';
+import { useEffect, useState, useCallback, createContext } from 'react';
 import useHttp from '../hooks/use-http';
 
 export const CryptoContext = createContext();
 
 export const CryptoProvider = ({ children }) => {
-  const applyData = (data) => {
+  const applyData = useCallback((data) => {
     setCryptosLoaded(data);
     setCryptos(data);
-  };
+  }, []);
 
-  const {
-    isLoading,
-    error,
-    sendRequest: fetchCryptos,
-  } = useHttp(
-    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false',
-    applyData
-  );
+  const { isLoading, error, sendRequest: fetchCryptos } = useHttp(applyData);
 
   const [cryptosLoaded, setCryptosLoaded] = useState([]);
   const [cryptos, setCryptos] = useState([]);
@@ -24,7 +17,9 @@ export const CryptoProvider = ({ children }) => {
   const [query, setQuery] = useState('');
 
   useEffect(() => {
-    fetchCryptos();
+    fetchCryptos(
+      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+    );
   }, []);
 
   useEffect(() => {
