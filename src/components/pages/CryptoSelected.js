@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect} from 'react';
+import { Link, useParams } from 'react-router-dom';
+
 import Header from '../layout/Header/Header';
 import Main from '../layout/Main/Main';
-import Chart from '../layout/Chart/Chart';
-import { Link, useParams } from 'react-router-dom';
-import { useEffect } from 'react/cjs/react.development';
+import Chart from '../crypto/Chart/Chart';
 
 const CryptoSelected = () => {
   const { cryptoId } = useParams();

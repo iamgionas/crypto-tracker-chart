@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../layout/Header/Header';
-import TextField from '../layout/TextField/TextField';
+import TextField from '../common/TextField/TextField';
 import Main from '../layout/Main/Main';
 import Grid from '../layout/Grid/Grid';
 

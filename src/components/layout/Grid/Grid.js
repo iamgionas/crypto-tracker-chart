@@ -1,12 +1,15 @@
-import React, { useContext } from 'react';
 import styles from './Grid.module.scss';
-import Card from '../Card/Card';
-import Loading from '../Loading/Loading';
-import { CryptoContext } from '../../../store/CryptoContext';
-import NotFound from '../NotFound/NotFound';
+
+import { useContext } from 'react';
+import { CryptosContext } from '../../../store/CryptosContext';
+
+
+import Card from '../../crypto/Card/Card';
+import Loading from '../../common/Loading/Loading';
+import NotFound from '../../common/NotFound/NotFound';
 
 const Grid = () => {
-  const cryptoCtx = useContext(CryptoContext);
+  const cryptoCtx = useContext(CryptosContext);
 
   if (cryptoCtx.cryptos.length === 0 && cryptoCtx.query) return <NotFound />;
   else if (cryptoCtx.isLoading) return <Loading />;

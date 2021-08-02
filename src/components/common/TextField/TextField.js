@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
 import styles from './TextField.module.scss';
-import { CryptoContext } from '../../../store/CryptoContext';
+
+import { useContext } from 'react';
+import { CryptosContext } from '../../../store/CryptosContext';
 
 const TextField = () => {
-  const cryptoCtx = useContext(CryptoContext);
+  const cryptoCtx = useContext(CryptosContext);
 
   return (
     <input

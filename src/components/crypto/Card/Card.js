@@ -1,9 +1,10 @@
-import React from 'react';
 import styles from './Card.module.scss';
-import Chip from '../Chip/Chip';
-import { Link } from 'react-router-dom';
 
-const Item = ({ crypto }) => {
+import { Link } from 'react-router-dom';
+import Chip from '../../common/Chip/Chip';
+
+
+const Card = ({ crypto }) => {
   const toCurrency = (number) => {
     return new Intl.NumberFormat('en-EN', {
       style: 'currency',
@@ -33,4 +34,4 @@ const Item = ({ crypto }) => {
   );
 };
 
-export default Item;
+export default Card;

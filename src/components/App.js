@@ -1,12 +1,12 @@
-import React from 'react';
-import { CryptoProvider } from '../store/CryptoContext';
-import { Route, Switch } from 'react-router-dom';
-import CryptosList from './pages/CryptosList';
-import CryptoSelected from './pages/CryptoSelected';
+import React from "react";
+import { CryptosProvider } from "../store/CryptosContext";
+import { Route, Switch } from "react-router-dom";
+import CryptosList from "./pages/CryptosList";
+import CryptoSelected from "./pages/CryptoSelected";
 
 const App = () => {
   return (
-    <CryptoProvider>
+    <CryptosProvider>
       <Switch>
         <Route path="/crypto/:cryptoId">
           <CryptoSelected />
@@ -15,7 +15,7 @@ const App = () => {
           <CryptosList />
         </Route>
       </Switch>
-    </CryptoProvider>
+    </CryptosProvider>
   );
 };
 
