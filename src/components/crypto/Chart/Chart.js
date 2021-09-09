@@ -1,30 +1,26 @@
-import ChartistGraph from 'react-chartist';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const Chart = () => {
-  var data = {
-    labels: ['1', '2', '3', '4', '5', '6'],
-    series: [
-      {
-        data: [1, 2, 3, 5, 8, 13],
-      },
-    ],
-  };
-
-  var options = {
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return 'Calendar Week ' + value;
-      },
-    },
-    width: '95vw',
-    height: '600px',
-  };
-
-  var type = 'Line';
+const Chart = ({data}) => {
 
   return (
-    <div style={{ background: 'white', borderRadius: '1rem' }}>
-      <ChartistGraph data={data} type={type} options={options} />
+    <div style={{ width: '100%', height: '80vh', backgroundColor: 'white', borderRadius: '25px', padding: '10px' }}>
+      <ResponsiveContainer>
+        <AreaChart
+          data={data}
+          margin={{
+            top: 10,
+            right: 30,
+            left: 0,
+            bottom: 0,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+        </AreaChart>
+      </ResponsiveContainer>
     </div>
   );
 };
