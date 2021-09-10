@@ -3,13 +3,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/gionasdev/crypto-tracker-chart">
-    <img src="src/assets/logo.png" alt="Logo" width="125" height="150">
+    <img src="src/assets/logo.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Crypto Tracker Chart</h3>
 
   <p align="center">
-    Simple web app to watch crypto market trend. I used React.js.
+    Simple web app to check crypto trend.
     <br />
     <br />
     <a href="https://crypto-tracker-chart.netlify.app">View Demo</a>
@@ -18,14 +18,14 @@
 
 ## About The Project
 
-Simple web app to watch crypto market trend. I used **React.js** and the last **ES6 Features**.
+Simple web app to check crypto market trend. I used **React.js** and **Recharts**.
 
 ## Built With
 
 - HTML5
-- CSS
+- SCSS
 - [ReactJS](https://reactjs.org/)
-- [chartist](https://gionkunz.github.io/chartist-js/)
+- [Recharts](https://recharts.org/en-US/)
 
 <!-- GETTING STARTED -->
 
