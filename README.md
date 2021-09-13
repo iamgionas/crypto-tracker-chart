@@ -6,7 +6,7 @@
     <img src="src/assets/logo.png" alt="Logo" width="150" height="150">
   </a>
 
-  <h3 align="center">Crypto Tracker Chart</h3>
+  <h3 align="center">Crypto Tracker Chart [in progress]</h3>
 
   <p align="center">
     Simple web app to check crypto trend.
