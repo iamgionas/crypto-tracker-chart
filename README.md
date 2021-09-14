@@ -26,6 +26,7 @@ Simple web app to check crypto market trend. I used **React.js** and **Recharts*
 - SCSS
 - [ReactJS](https://reactjs.org/)
 - [Recharts](https://recharts.org/en-US/)
+- [Coingecko API](https://www.coingecko.com/en/api)
 
 <!-- GETTING STARTED -->
 
